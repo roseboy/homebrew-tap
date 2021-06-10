@@ -5,34 +5,31 @@
 class Httpcase < Formula
   desc "接口自动化测试工具"
   homepage "https://github.com/roseboy/httpcase"
-  version "1.0.8-beta"
+  version "1.0.9-beta"
   license "MulanPSL2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_darwin_x86_64.tar.gz"
-      sha256 "6956d98c264a238a6b35333bfa799227df8bf04b17f88211791341590fb29986"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_darwin_x86_64.tar.gz"
+      sha256 "0d324ab910f99f315baab31bc82baaef0f923612d3255a79fe115c4063c5e5a5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_x86_64.tar.gz"
-      sha256 "fbbedcb246608900e718f265d65be1a54b062f35eb83414b5640d74e365547c6"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_x86_64.tar.gz"
+      sha256 "5a3962ccc2c604ed99213a8d923a9bac5cb53d742dae90c7b6a902e3df1b421c"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_armv6.tar.gz"
-      sha256 "0db6d022dff1d46ba833ace8885c4c1545e5b3e0c1298dc5dcd51cd37c6ee6bb"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_armv6.tar.gz"
+      sha256 "dbfffd4fcb3ef9b0df4ee90d6449d655083ba884abe46ebd017a1a8face62587"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_arm64.tar.gz"
-      sha256 "daecba221cad963757e002e09871e3e34dfa50cd9bcff89ca4a43847e53c8cf6"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_arm64.tar.gz"
+      sha256 "c6f842753798bf23d8d3f87bc0cc6ac3e72d83f4d061c0733b960d36c9b2d9df"
     end
   end
-
-  depends_on "go" => :optional
-  depends_on "git"
 
   def install
     bin.install "hc"
