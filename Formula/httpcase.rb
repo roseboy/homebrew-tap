@@ -5,29 +5,29 @@
 class Httpcase < Formula
   desc "接口自动化测试工具"
   homepage "https://github.com/roseboy/httpcase"
-  version "1.0.7-beta"
+  version "1.0.8-beta"
   license "MulanPSL2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.7-beta/httpcase_1.0.7-beta_darwin_x86_64.tar.gz"
-      sha256 "effb8422c12bf0a523f657e10388ff99a2c2135592b9d5fb04fd43a0a2239afe"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_darwin_x86_64.tar.gz"
+      sha256 "6956d98c264a238a6b35333bfa799227df8bf04b17f88211791341590fb29986"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.7-beta/httpcase_1.0.7-beta_linux_x86_64.tar.gz"
-      sha256 "a401de1c68c6610ebc39577fb96eb58ee67316a13ca1d09e01d3222ee29a211c"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_x86_64.tar.gz"
+      sha256 "fbbedcb246608900e718f265d65be1a54b062f35eb83414b5640d74e365547c6"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.7-beta/httpcase_1.0.7-beta_linux_armv6.tar.gz"
-      sha256 "7a2694a9a26fbf8b094556ee758536d408a25d9376029c4cb80e1a1267113271"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_armv6.tar.gz"
+      sha256 "0db6d022dff1d46ba833ace8885c4c1545e5b3e0c1298dc5dcd51cd37c6ee6bb"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.7-beta/httpcase_1.0.7-beta_linux_arm64.tar.gz"
-      sha256 "b09be5c78079262a2500b54ebd52a6d5957cdc7066a148110cd5d139c97ca2fd"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.8-beta/httpcase_1.0.8-beta_linux_arm64.tar.gz"
+      sha256 "daecba221cad963757e002e09871e3e34dfa50cd9bcff89ca4a43847e53c8cf6"
     end
   end
 
@@ -35,10 +35,10 @@ class Httpcase < Formula
   depends_on "git"
 
   def install
-    bin.install "httpcase"
+    bin.install "hc"
   end
 
   test do
-    system "#{bin}/httpcase version"
+    system "#{bin}/hc version"
   end
 end
