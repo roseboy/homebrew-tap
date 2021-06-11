@@ -5,29 +5,29 @@
 class Httpcase < Formula
   desc "接口自动化测试工具"
   homepage "https://github.com/roseboy/httpcase"
-  version "1.0.9-beta"
+  version "1.0.10-beta"
   license "MulanPSL2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_darwin_x86_64.tar.gz"
-      sha256 "0d324ab910f99f315baab31bc82baaef0f923612d3255a79fe115c4063c5e5a5"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.10-beta/httpcase_1.0.10-beta_darwin_x86_64.tar.gz"
+      sha256 "f02afdb441fbad7dbc6dedc73322535ef740d146956744105771c80d35bd2d34"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_x86_64.tar.gz"
-      sha256 "5a3962ccc2c604ed99213a8d923a9bac5cb53d742dae90c7b6a902e3df1b421c"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.10-beta/httpcase_1.0.10-beta_linux_x86_64.tar.gz"
+      sha256 "cf26907593b704279bd097b9c518da65d75c2a43cbd86c1e7b28c0f8e0806a8a"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_armv6.tar.gz"
-      sha256 "dbfffd4fcb3ef9b0df4ee90d6449d655083ba884abe46ebd017a1a8face62587"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.10-beta/httpcase_1.0.10-beta_linux_armv6.tar.gz"
+      sha256 "aefdec4220bdad9cce6f3e4b8339bc010300c56e20a411b1adbf0ab1d7d8aef2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v1.0.9-beta/httpcase_1.0.9-beta_linux_arm64.tar.gz"
-      sha256 "c6f842753798bf23d8d3f87bc0cc6ac3e72d83f4d061c0733b960d36c9b2d9df"
+      url "https://github.com/roseboy/httpcase/releases/download/v1.0.10-beta/httpcase_1.0.10-beta_linux_arm64.tar.gz"
+      sha256 "647d19267c2047ddd2bad48fcb16249e8cc2b6c6e55d268a7b4c979ab6a36171"
     end
   end
 
