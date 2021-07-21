@@ -5,29 +5,29 @@
 class Httpcase < Formula
   desc "接口自动化测试工具"
   homepage "https://github.com/roseboy/httpcase"
-  version "0.0.4"
+  version "0.0.5"
   license "MulanPSL2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v0.0.4/httpcase_0.0.4_darwin_x86_64.tar.gz"
-      sha256 "673802d194209c15396992e6f58fcdc3631321874ae6518f1808302bb670d175"
+      url "https://github.com/roseboy/httpcase/releases/download/v0.0.5/httpcase_0.0.5_darwin_x86_64.tar.gz"
+      sha256 "7253f30e527989e6e369a42ef9f14d134230b15fd6833e0e06d46668f1e29059"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/roseboy/httpcase/releases/download/v0.0.4/httpcase_0.0.4_linux_x86_64.tar.gz"
-      sha256 "33b61eecee3f170d48602a2ea1abcd522e8e8fb916386cd0b90cd623706be3c8"
+      url "https://github.com/roseboy/httpcase/releases/download/v0.0.5/httpcase_0.0.5_linux_x86_64.tar.gz"
+      sha256 "68f1df8cacb045d219244394a42917eec633f6d35020dffcceace198259b7ba3"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v0.0.4/httpcase_0.0.4_linux_armv6.tar.gz"
-      sha256 "449a8b75829553c238da859a0d29c637c81f1edc9b779153e1490ee9c8921faf"
+      url "https://github.com/roseboy/httpcase/releases/download/v0.0.5/httpcase_0.0.5_linux_armv6.tar.gz"
+      sha256 "3043beab0bc7924d20c6a0e00dc598f75bfb636ea471ab88d9ec26c48b0b7859"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/roseboy/httpcase/releases/download/v0.0.4/httpcase_0.0.4_linux_arm64.tar.gz"
-      sha256 "f9f0e00176e4663564d4393b313d95079582e2ee5d2e00a44e29dfe9880035cb"
+      url "https://github.com/roseboy/httpcase/releases/download/v0.0.5/httpcase_0.0.5_linux_arm64.tar.gz"
+      sha256 "73c1671a76eb2685381810ce9891a269177ac104b58214a06384ef945b1ccccf"
     end
   end
 
